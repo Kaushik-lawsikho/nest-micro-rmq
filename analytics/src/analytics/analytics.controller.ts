@@ -29,9 +29,6 @@ export class AnalyticsController {
   // RPC: request-response
   @MessagePattern('user.summary')
   getSummary(@Payload() payload: any) {
-    const summary = this.svc.getSummary(payload?.window);
-    console.log('Analytics: replying user.summary', summary);
-    // you can return plain object or Observable; Nest will send it back as RPC reply
-    return of(summary);
+    return this.svc.getSummary(payload?.window);
   }
 }
