@@ -21,7 +21,7 @@ import { Tag } from './entities/tag.entity';
         host: config.get<string>('DB_HOST', 'localhost'),
         port: parseInt(config.get<string>('DB_PORT', '5432'), 10),
         username: config.get<string>('DB_USER', 'postgres'),
-        password: config.get<string>('DB_PASS', 'baba'),
+        password: config.get<string>('DB_PASS', 'your_db_password'),
         database: config.get<string>('DB_NAME', 'analytics'),
         entities: [User, Activity, Tag],
         synchronize: false,
